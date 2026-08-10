@@ -1,0 +1,912 @@
+[
+  {
+    "id": "3/4 Sit-Up",
+    "name": "3/4 Sit-Up",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "compound",
+    "equipment": "body only",
+    "primary_muscles": [
+      "abdominals"
+    ]
+  },
+  {
+    "id": "90/90 Hamstring",
+    "name": "90/90 Hamstring",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "push",
+    "mechanic": null,
+    "equipment": "body only",
+    "primary_muscles": [
+      "hamstrings"
+    ]
+  },
+  {
+    "id": "Ab Crunch Machine",
+    "name": "Ab Crunch Machine",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "isolation",
+    "equipment": "machine",
+    "primary_muscles": [
+      "abdominals"
+    ]
+  },
+  {
+    "id": "Ab Roller",
+    "name": "Ab Roller",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "compound",
+    "equipment": "other",
+    "primary_muscles": [
+      "abdominals"
+    ]
+  },
+  {
+    "id": "Adductor",
+    "name": "Adductor",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "static",
+    "mechanic": "isolation",
+    "equipment": "foam roll",
+    "primary_muscles": [
+      "adductors"
+    ]
+  },
+  {
+    "id": "Adductor/Groin",
+    "name": "Adductor/Groin",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "static",
+    "mechanic": null,
+    "equipment": null,
+    "primary_muscles": [
+      "adductors"
+    ]
+  },
+  {
+    "id": "Advanced Kettlebell Windmill",
+    "name": "Advanced Kettlebell Windmill",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "push",
+    "mechanic": "isolation",
+    "equipment": "kettlebells",
+    "primary_muscles": [
+      "abdominals"
+    ]
+  },
+  {
+    "id": "Air Bike",
+    "name": "Air Bike",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "compound",
+    "equipment": "body only",
+    "primary_muscles": [
+      "abdominals"
+    ]
+  },
+  {
+    "id": "All Fours Quad Stretch",
+    "name": "All Fours Quad Stretch",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "static",
+    "mechanic": null,
+    "equipment": "body only",
+    "primary_muscles": [
+      "quadriceps"
+    ]
+  },
+  {
+    "id": "Alternate Hammer Curl",
+    "name": "Alternate Hammer Curl",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "isolation",
+    "equipment": "dumbbell",
+    "primary_muscles": [
+      "biceps"
+    ]
+  },
+  {
+    "id": "Alternate Heel Touchers",
+    "name": "Alternate Heel Touchers",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "isolation",
+    "equipment": "body only",
+    "primary_muscles": [
+      "abdominals"
+    ]
+  },
+  {
+    "id": "Alternate Incline Dumbbell Curl",
+    "name": "Alternate Incline Dumbbell Curl",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "isolation",
+    "equipment": "dumbbell",
+    "primary_muscles": [
+      "biceps"
+    ]
+  },
+  {
+    "id": "Alternate Leg Diagonal Bound",
+    "name": "Alternate Leg Diagonal Bound",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "push",
+    "mechanic": "compound",
+    "equipment": null,
+    "primary_muscles": [
+      "quadriceps"
+    ]
+  },
+  {
+    "id": "Alternating Deltoid Raise",
+    "name": "Alternating Deltoid Raise",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "push",
+    "mechanic": "isolation",
+    "equipment": "dumbbell",
+    "primary_muscles": [
+      "shoulders"
+    ]
+  },
+  {
+    "id": "Alternating Floor Press",
+    "name": "Alternating Floor Press",
+    "movement_pattern": "horizontal_push",
+    "confidence": 0.75,
+    "rule_id": "R09_HORIZONTAL_PUSH_MUSCLE",
+    "force": "push",
+    "mechanic": "compound",
+    "equipment": "kettlebells",
+    "primary_muscles": [
+      "chest"
+    ]
+  },
+  {
+    "id": "Alternating Hang Clean",
+    "name": "Alternating Hang Clean",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "compound",
+    "equipment": "kettlebells",
+    "primary_muscles": [
+      "hamstrings"
+    ]
+  },
+  {
+    "id": "Alternating Kettlebell Press",
+    "name": "Alternating Kettlebell Press",
+    "movement_pattern": "vertical_push",
+    "confidence": 0.7,
+    "rule_id": "R07_VERTICAL_PUSH_MUSCLE",
+    "force": "push",
+    "mechanic": "compound",
+    "equipment": "kettlebells",
+    "primary_muscles": [
+      "shoulders"
+    ]
+  },
+  {
+    "id": "Ankle Circles",
+    "name": "Ankle Circles",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "isolation",
+    "equipment": null,
+    "primary_muscles": [
+      "calves"
+    ]
+  },
+  {
+    "id": "Ankle On The Knee",
+    "name": "Ankle On The Knee",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "static",
+    "mechanic": null,
+    "equipment": null,
+    "primary_muscles": [
+      "glutes"
+    ]
+  },
+  {
+    "id": "Anterior Tibialis-SMR",
+    "name": "Anterior Tibialis-SMR",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "static",
+    "mechanic": null,
+    "equipment": "other",
+    "primary_muscles": [
+      "calves"
+    ]
+  },
+  {
+    "id": "Anti-Gravity Press",
+    "name": "Anti-Gravity Press",
+    "movement_pattern": "vertical_push",
+    "confidence": 0.7,
+    "rule_id": "R07_VERTICAL_PUSH_MUSCLE",
+    "force": "push",
+    "mechanic": "compound",
+    "equipment": "barbell",
+    "primary_muscles": [
+      "shoulders"
+    ]
+  },
+  {
+    "id": "Arm Circles",
+    "name": "Arm Circles",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "push",
+    "mechanic": "isolation",
+    "equipment": null,
+    "primary_muscles": [
+      "shoulders"
+    ]
+  },
+  {
+    "id": "Arnold Dumbbell Press",
+    "name": "Arnold Dumbbell Press",
+    "movement_pattern": "vertical_push",
+    "confidence": 0.7,
+    "rule_id": "R07_VERTICAL_PUSH_MUSCLE",
+    "force": "push",
+    "mechanic": "compound",
+    "equipment": "dumbbell",
+    "primary_muscles": [
+      "shoulders"
+    ]
+  },
+  {
+    "id": "Around The Worlds",
+    "name": "Around The Worlds",
+    "movement_pattern": "horizontal_push",
+    "confidence": 0.75,
+    "rule_id": "R09_HORIZONTAL_PUSH_MUSCLE",
+    "force": "push",
+    "mechanic": "compound",
+    "equipment": "dumbbell",
+    "primary_muscles": [
+      "chest"
+    ]
+  },
+  {
+    "id": "Atlas Stone Trainer",
+    "name": "Atlas Stone Trainer",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "compound",
+    "equipment": "other",
+    "primary_muscles": [
+      "lower back"
+    ]
+  },
+  {
+    "id": "Atlas Stones",
+    "name": "Atlas Stones",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "compound",
+    "equipment": "other",
+    "primary_muscles": [
+      "lower back"
+    ]
+  },
+  {
+    "id": "Back Flyes - With Bands",
+    "name": "Back Flyes - With Bands",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "compound",
+    "equipment": "bands",
+    "primary_muscles": [
+      "shoulders"
+    ]
+  },
+  {
+    "id": "Backward Drag",
+    "name": "Backward Drag",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "compound",
+    "equipment": "other",
+    "primary_muscles": [
+      "quadriceps"
+    ]
+  },
+  {
+    "id": "Backward Medicine Ball Throw",
+    "name": "Backward Medicine Ball Throw",
+    "movement_pattern": "vertical_push",
+    "confidence": 0.7,
+    "rule_id": "R07_VERTICAL_PUSH_MUSCLE",
+    "force": "push",
+    "mechanic": "compound",
+    "equipment": "medicine ball",
+    "primary_muscles": [
+      "shoulders"
+    ]
+  },
+  {
+    "id": "Balance Board",
+    "name": "Balance Board",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": null,
+    "mechanic": "compound",
+    "equipment": "other",
+    "primary_muscles": [
+      "calves"
+    ]
+  },
+  {
+    "id": "Ball Leg Curl",
+    "name": "Ball Leg Curl",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "isolation",
+    "equipment": "exercise ball",
+    "primary_muscles": [
+      "hamstrings"
+    ]
+  },
+  {
+    "id": "Band Assisted Pull-Up",
+    "name": "Band Assisted Pull-Up",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": null,
+    "mechanic": "compound",
+    "equipment": "other",
+    "primary_muscles": [
+      "lats"
+    ]
+  },
+  {
+    "id": "Band Hip Adductions",
+    "name": "Band Hip Adductions",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "isolation",
+    "equipment": "bands",
+    "primary_muscles": [
+      "adductors"
+    ]
+  },
+  {
+    "id": "Band Pull Apart",
+    "name": "Band Pull Apart",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "isolation",
+    "equipment": "bands",
+    "primary_muscles": [
+      "shoulders"
+    ]
+  },
+  {
+    "id": "Band Skull Crusher",
+    "name": "Band Skull Crusher",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "push",
+    "mechanic": "isolation",
+    "equipment": "bands",
+    "primary_muscles": [
+      "triceps"
+    ]
+  },
+  {
+    "id": "Barbell Curl",
+    "name": "Barbell Curl",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "isolation",
+    "equipment": "barbell",
+    "primary_muscles": [
+      "biceps"
+    ]
+  },
+  {
+    "id": "Barbell Curls Lying Against An Incline",
+    "name": "Barbell Curls Lying Against An Incline",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "isolation",
+    "equipment": "barbell",
+    "primary_muscles": [
+      "biceps"
+    ]
+  },
+  {
+    "id": "Barbell Incline Shoulder Raise",
+    "name": "Barbell Incline Shoulder Raise",
+    "movement_pattern": "vertical_push",
+    "confidence": 0.7,
+    "rule_id": "R07_VERTICAL_PUSH_MUSCLE",
+    "force": "push",
+    "mechanic": "compound",
+    "equipment": "barbell",
+    "primary_muscles": [
+      "shoulders"
+    ]
+  },
+  {
+    "id": "Barbell Seated Calf Raise",
+    "name": "Barbell Seated Calf Raise",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "push",
+    "mechanic": "isolation",
+    "equipment": "barbell",
+    "primary_muscles": [
+      "calves"
+    ]
+  },
+  {
+    "id": "Barbell Shrug",
+    "name": "Barbell Shrug",
+    "movement_pattern": "horizontal_pull",
+    "confidence": 0.65,
+    "rule_id": "R08_HORIZONTAL_PULL_MUSCLE",
+    "force": "pull",
+    "mechanic": "isolation",
+    "equipment": "barbell",
+    "primary_muscles": [
+      "traps"
+    ]
+  },
+  {
+    "id": "Barbell Shrug Behind The Back",
+    "name": "Barbell Shrug Behind The Back",
+    "movement_pattern": "horizontal_pull",
+    "confidence": 0.65,
+    "rule_id": "R08_HORIZONTAL_PULL_MUSCLE",
+    "force": "pull",
+    "mechanic": "isolation",
+    "equipment": "barbell",
+    "primary_muscles": [
+      "traps"
+    ]
+  },
+  {
+    "id": "Barbell Side Bend",
+    "name": "Barbell Side Bend",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "isolation",
+    "equipment": "barbell",
+    "primary_muscles": [
+      "abdominals"
+    ]
+  },
+  {
+    "id": "Battling Ropes",
+    "name": "Battling Ropes",
+    "movement_pattern": "vertical_push",
+    "confidence": 0.7,
+    "rule_id": "R07_VERTICAL_PUSH_MUSCLE",
+    "force": "push",
+    "mechanic": "compound",
+    "equipment": "other",
+    "primary_muscles": [
+      "shoulders"
+    ]
+  },
+  {
+    "id": "Bear Crawl Sled Drags",
+    "name": "Bear Crawl Sled Drags",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "push",
+    "mechanic": "compound",
+    "equipment": "other",
+    "primary_muscles": [
+      "quadriceps"
+    ]
+  },
+  {
+    "id": "Behind Head Chest Stretch",
+    "name": "Behind Head Chest Stretch",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "static",
+    "mechanic": "isolation",
+    "equipment": "other",
+    "primary_muscles": [
+      "chest"
+    ]
+  },
+  {
+    "id": "Bench Dips",
+    "name": "Bench Dips",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "push",
+    "mechanic": "compound",
+    "equipment": "body only",
+    "primary_muscles": [
+      "triceps"
+    ]
+  },
+  {
+    "id": "Bench Jump",
+    "name": "Bench Jump",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "push",
+    "mechanic": "compound",
+    "equipment": "body only",
+    "primary_muscles": [
+      "quadriceps"
+    ]
+  },
+  {
+    "id": "Bench Sprint",
+    "name": "Bench Sprint",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "push",
+    "mechanic": "compound",
+    "equipment": "other",
+    "primary_muscles": [
+      "quadriceps"
+    ]
+  },
+  {
+    "id": "Bent Over Dumbbell Rear Delt Raise With Head On Bench",
+    "name": "Bent Over Dumbbell Rear Delt Raise With Head On Bench",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "isolation",
+    "equipment": "dumbbell",
+    "primary_muscles": [
+      "shoulders"
+    ]
+  },
+  {
+    "id": "Bent Over Low-Pulley Side Lateral",
+    "name": "Bent Over Low-Pulley Side Lateral",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "isolation",
+    "equipment": "cable",
+    "primary_muscles": [
+      "shoulders"
+    ]
+  },
+  {
+    "id": "Bent Press",
+    "name": "Bent Press",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "compound",
+    "equipment": "kettlebells",
+    "primary_muscles": [
+      "abdominals"
+    ]
+  },
+  {
+    "id": "Bent-Arm Barbell Pullover",
+    "name": "Bent-Arm Barbell Pullover",
+    "movement_pattern": "vertical_pull",
+    "confidence": 0.65,
+    "rule_id": "R06_VERTICAL_PULL_MUSCLE",
+    "force": "pull",
+    "mechanic": "compound",
+    "equipment": "barbell",
+    "primary_muscles": [
+      "lats"
+    ]
+  },
+  {
+    "id": "Bent-Arm Dumbbell Pullover",
+    "name": "Bent-Arm Dumbbell Pullover",
+    "movement_pattern": "horizontal_push",
+    "confidence": 0.75,
+    "rule_id": "R09_HORIZONTAL_PUSH_MUSCLE",
+    "force": "push",
+    "mechanic": "compound",
+    "equipment": "dumbbell",
+    "primary_muscles": [
+      "chest"
+    ]
+  },
+  {
+    "id": "Bent-Knee Hip Raise",
+    "name": "Bent-Knee Hip Raise",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "compound",
+    "equipment": "body only",
+    "primary_muscles": [
+      "abdominals"
+    ]
+  },
+  {
+    "id": "Bicycling",
+    "name": "Bicycling",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": null,
+    "mechanic": null,
+    "equipment": "other",
+    "primary_muscles": [
+      "quadriceps"
+    ]
+  },
+  {
+    "id": "Bicycling, Stationary",
+    "name": "Bicycling, Stationary",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": null,
+    "mechanic": null,
+    "equipment": "machine",
+    "primary_muscles": [
+      "quadriceps"
+    ]
+  },
+  {
+    "id": "Board Press",
+    "name": "Board Press",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "push",
+    "mechanic": "compound",
+    "equipment": "barbell",
+    "primary_muscles": [
+      "triceps"
+    ]
+  },
+  {
+    "id": "Body Tricep Press",
+    "name": "Body Tricep Press",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "push",
+    "mechanic": "isolation",
+    "equipment": "body only",
+    "primary_muscles": [
+      "triceps"
+    ]
+  },
+  {
+    "id": "Body-Up",
+    "name": "Body-Up",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "push",
+    "mechanic": "isolation",
+    "equipment": "body only",
+    "primary_muscles": [
+      "triceps"
+    ]
+  },
+  {
+    "id": "Bodyweight Flyes",
+    "name": "Bodyweight Flyes",
+    "movement_pattern": "horizontal_push",
+    "confidence": 0.75,
+    "rule_id": "R09_HORIZONTAL_PUSH_MUSCLE",
+    "force": "push",
+    "mechanic": "isolation",
+    "equipment": "e-z curl bar",
+    "primary_muscles": [
+      "chest"
+    ]
+  },
+  {
+    "id": "Bosu Ball Cable Crunch With Side Bends",
+    "name": "Bosu Ball Cable Crunch With Side Bends",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "isolation",
+    "equipment": "cable",
+    "primary_muscles": [
+      "abdominals"
+    ]
+  },
+  {
+    "id": "Bottoms Up",
+    "name": "Bottoms Up",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "compound",
+    "equipment": "body only",
+    "primary_muscles": [
+      "abdominals"
+    ]
+  },
+  {
+    "id": "Bottoms-Up Clean From The Hang Position",
+    "name": "Bottoms-Up Clean From The Hang Position",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "compound",
+    "equipment": "kettlebells",
+    "primary_muscles": [
+      "forearms"
+    ]
+  },
+  {
+    "id": "Box Jump (Multiple Response)",
+    "name": "Box Jump (Multiple Response)",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "push",
+    "mechanic": "compound",
+    "equipment": "other",
+    "primary_muscles": [
+      "hamstrings"
+    ]
+  },
+  {
+    "id": "Box Skip",
+    "name": "Box Skip",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "push",
+    "mechanic": "compound",
+    "equipment": "other",
+    "primary_muscles": [
+      "hamstrings"
+    ]
+  },
+  {
+    "id": "Brachialis-SMR",
+    "name": "Brachialis-SMR",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "static",
+    "mechanic": null,
+    "equipment": "foam roll",
+    "primary_muscles": [
+      "biceps"
+    ]
+  },
+  {
+    "id": "Bradford/Rocky Presses",
+    "name": "Bradford/Rocky Presses",
+    "movement_pattern": "vertical_push",
+    "confidence": 0.7,
+    "rule_id": "R07_VERTICAL_PUSH_MUSCLE",
+    "force": "push",
+    "mechanic": "compound",
+    "equipment": "barbell",
+    "primary_muscles": [
+      "shoulders"
+    ]
+  },
+  {
+    "id": "Butt Lift (Bridge)",
+    "name": "Butt Lift (Bridge)",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "push",
+    "mechanic": "isolation",
+    "equipment": "body only",
+    "primary_muscles": [
+      "glutes"
+    ]
+  },
+  {
+    "id": "Butterfly",
+    "name": "Butterfly",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "isolation",
+    "equipment": "machine",
+    "primary_muscles": [
+      "chest"
+    ]
+  },
+  {
+    "id": "Butt-Ups",
+    "name": "Butt-Ups",
+    "movement_pattern": "unknown",
+    "confidence": 0.0,
+    "rule_id": "R14_UNKNOWN",
+    "force": "pull",
+    "mechanic": "compound",
+    "equipment": "body only",
+    "primary_muscles": [
+      "abdominals"
+    ]
+  }
+]
