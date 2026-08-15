@@ -25,13 +25,14 @@ OUTPUT_PATH = OUTPUT_DIR / "classified_exercises.json"
 # TAXONOMY
 # ============================================================
 
-MOVEMENT_PATTERNS = {
+VALID_MOVEMENT_PATTERNS = {
     "squat",
     "hinge",
     "unilateral_leg",
 
     "horizontal_push",
     "horizontal_pull",
+
     "vertical_push",
     "vertical_pull",
 
@@ -42,9 +43,6 @@ MOVEMENT_PATTERNS = {
     "shoulder_abduction",
     "shoulder_elevation",
 
-    "hip_abduction",
-    "plantar_flexion",
-
     "anti_extension",
     "anti_flexion",
     "anti_rotation",
@@ -52,6 +50,10 @@ MOVEMENT_PATTERNS = {
 
     "carry",
     "locomotion",
+
+    "plantar_flexion",
+
+    "core_flexion",
 
     "plyometric",
     "cardio",
@@ -61,8 +63,20 @@ MOVEMENT_PATTERNS = {
     "balance",
     "conditioning",
 
-    "core_flexion",
+    "unknown",
+}
 
+VALID_EXERCISE_TYPES = {
+    "compound",
+    "isolation",
+    "core",
+    "cardio",
+    "plyometric",
+    "conditioning",
+    "mobility",
+    "stretching",
+    "recovery",
+    "balance",
     "unknown",
 }
 
@@ -236,6 +250,174 @@ def muscle_contains(
 
     return bool(all_muscles & normalized)
 
+def classify_exercise_type(
+    exercise: dict[str, Any],
+    movement_classification: dict[str, Any],
+) -> str:
+
+    category = get_category(exercise)
+    mechanic = get_mechanic(exercise)
+    name = get_name(exercise)
+
+    movement_pattern = movement_classification.get(
+        "movement_pattern",
+        "unknown",
+    )
+
+    # ========================================================
+    # 1. EXPLICIT TRAINING CATEGORIES
+    # ========================================================
+
+    if category == "cardio":
+        return "cardio"
+
+    if category == "plyometrics":
+        return "plyometric"
+
+    # ========================================================
+    # 2. RECOVERY / MOBILITY / STRETCHING
+    # ========================================================
+
+    if category == "stretching":
+
+        if text_contains(
+            name,
+            "smr",
+            "foam roll",
+            "foam roller",
+            "self myofascial",
+        ):
+            return "recovery"
+
+        return "stretching"
+
+    # ========================================================
+    # 3. CONDITIONING
+    # ========================================================
+
+    if text_contains(
+        name,
+        "battle rope",
+        "battling rope",
+        "sled",
+        "drag",
+        "bear crawl",
+        "farmer walk",
+        "farmer carry",
+        "suitcase carry",
+        "waiter carry",
+    ):
+        return "conditioning"
+
+    if movement_pattern == "conditioning":
+        return "conditioning"
+
+    # ========================================================
+    # 4. BALANCE
+    # ========================================================
+
+    if text_contains(
+        name,
+        "balance board",
+        "bosu",
+        "single leg balance",
+    ):
+        return "balance"
+
+    if movement_pattern == "balance":
+        return "balance"
+
+    # ========================================================
+    # 5. CORE
+    # ========================================================
+
+    core_name_patterns = (
+        "crunch",
+        "sit up",
+        "sit-up",
+        "ab rollout",
+        "ab wheel",
+        "ab roller",
+        "rollout",
+        "plank",
+        "hip raise",
+        "leg raise",
+        "knee raise",
+        "russian twist",
+        "russian twists",
+        "bicycle crunch",
+        "bicycle",
+        "heel toucher",
+        "heel touchers",
+        "v up",
+        "v-up",
+        "jackknife",
+        "toe touch",
+        "toe touches",
+    )
+
+    if text_contains(name, *core_name_patterns):
+        return "core"
+
+    if movement_pattern in {
+        "anti_extension",
+        "anti_flexion",
+        "anti_rotation",
+        "lateral_flexion",
+        "core_flexion",
+    }:
+        return "core"
+
+    # ========================================================
+    # 6. MOBILITY
+    # ========================================================
+
+    if movement_pattern == "mobility":
+        return "mobility"
+
+    # ========================================================
+    # 7. RECOVERY
+    # ========================================================
+
+    if movement_pattern == "recovery":
+        return "recovery"
+
+    # ========================================================
+    # 8. PLYOMETRIC
+    # ========================================================
+
+    if movement_pattern == "plyometric":
+        return "plyometric"
+
+    # ========================================================
+    # 9. CARDIO
+    # ========================================================
+
+    if movement_pattern == "cardio":
+        return "cardio"
+
+    # ========================================================
+    # 10. CONDITIONING
+    # ========================================================
+
+    if movement_pattern == "conditioning":
+        return "conditioning"
+
+    # ========================================================
+    # 11. MECHANIC-BASED CLASSIFICATION
+    # ========================================================
+
+    if mechanic == "compound":
+        return "compound"
+
+    if mechanic == "isolation":
+        return "isolation"
+
+    # ========================================================
+    # 12. UNKNOWN
+    # ========================================================
+
+    return "unknown"
 
 # ============================================================
 # RESULT OBJECT
@@ -1947,7 +2129,108 @@ def validate_classification(
 
     return warnings
 
+def validate_exercise_type(
+    exercise: dict[str, Any],
+    exercise_type: str,
+    movement_pattern: str,
+) -> list[str]:
 
+    warnings: list[str] = []
+
+    name = get_name(exercise)
+    category = get_category(exercise)
+    mechanic = get_mechanic(exercise)
+
+    # --------------------------------------------------------
+    # CORE
+    # --------------------------------------------------------
+
+    if movement_pattern in {
+        "anti_extension",
+        "anti_flexion",
+        "anti_rotation",
+        "lateral_flexion",
+        "core_flexion",
+    }:
+        if exercise_type != "core":
+            warnings.append(
+                f"{exercise.get('name')} -> "
+                f"{movement_pattern} should normally be exercise_type=core"
+            )
+
+    # --------------------------------------------------------
+    # CARDIO
+    # --------------------------------------------------------
+
+    if category == "cardio":
+        if exercise_type != "cardio":
+            warnings.append(
+                f"{exercise.get('name')} -> "
+                f"cardio category should be exercise_type=cardio"
+            )
+
+    # --------------------------------------------------------
+    # PLYOMETRIC
+    # --------------------------------------------------------
+
+    if category == "plyometrics":
+        if exercise_type != "plyometric":
+            warnings.append(
+                f"{exercise.get('name')} -> "
+                f"plyometrics category should be exercise_type=plyometric"
+            )
+
+    # --------------------------------------------------------
+    # STRETCHING
+    # --------------------------------------------------------
+
+    if category == "stretching":
+        if text_contains(
+            name,
+            "smr",
+            "foam roll",
+            "foam roller",
+            "self myofascial",
+        ):
+            if exercise_type != "recovery":
+                warnings.append(
+                    f"{exercise.get('name')} -> "
+                    f"SMR should be exercise_type=recovery"
+                )
+        elif exercise_type not in {
+            "stretching",
+            "recovery",
+            "mobility",
+        }:
+            warnings.append(
+                f"{exercise.get('name')} -> "
+                f"stretching category has suspicious exercise_type="
+                f"{exercise_type}"
+            )
+
+    # --------------------------------------------------------
+    # MECHANIC
+    # --------------------------------------------------------
+
+    if (
+        mechanic == "compound"
+        and exercise_type == "isolation"
+    ):
+        warnings.append(
+            f"{exercise.get('name')} -> "
+            f"mechanic=compound but exercise_type=isolation"
+        )
+
+    if (
+        mechanic == "isolation"
+        and exercise_type == "compound"
+    ):
+        warnings.append(
+            f"{exercise.get('name')} -> "
+            f"mechanic=isolation but exercise_type=compound"
+        )
+
+    return warnings
 # ============================================================
 # PRINTING
 # ============================================================
@@ -1991,8 +2274,10 @@ def analyze(
 ) -> list[dict[str, Any]]:
 
     classified: list[dict[str, Any]] = []
+    exercise_type_warnings: list[str] = []
 
-    type_distribution = Counter()
+    category_distribution = Counter()
+    exercise_type_distribution = Counter()
     movement_distribution = Counter()
     rule_distribution = Counter()
 
@@ -2010,7 +2295,23 @@ def analyze(
 
         classification = classify_exercise(exercise)
 
+        exercise_type = classify_exercise_type(
+            exercise,
+            classification,
+        )
+        type_warnings = validate_exercise_type(
+            exercise,
+            exercise_type,
+            classification["movement_pattern"],
+        )
+
+        exercise_type_warnings.extend(
+            type_warnings
+        )
+
         enriched = dict(exercise)
+
+        enriched["exercise_type"] = exercise_type
 
         enriched["movement_pattern"] = (
             classification["movement_pattern"]
@@ -2031,15 +2332,16 @@ def analyze(
         classified.append(enriched)
 
         category = (
-            exercise.get("category")
-            or "unknown"
+                exercise.get("category")
+                or "unknown"
         )
 
         pattern = classification["movement_pattern"]
 
         confidence = classification["confidence"]
 
-        type_distribution[category] += 1
+        category_distribution[category] += 1
+        exercise_type_distribution[exercise_type] += 1
         movement_distribution[pattern] += 1
         rule_distribution[
             classification["rule_id"]
@@ -2097,7 +2399,12 @@ def analyze(
 
     print_distribution(
         "EXERCISE CATEGORY DISTRIBUTION",
-        type_distribution,
+        category_distribution,
+        total,
+    )
+    print_distribution(
+        "EXERCISE TYPE DISTRIBUTION",
+        exercise_type_distribution,
         total,
     )
 
