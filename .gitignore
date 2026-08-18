@@ -41,3 +41,9 @@ coverage.xml
 # Alembic (اگر دیتابیس را محلی و با SQLite تست می‌کنی)
 *.sqlite3
 *.db
+
+node_modules
+dist
+.env.local
+*.log
+

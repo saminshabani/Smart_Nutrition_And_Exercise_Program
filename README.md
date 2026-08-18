@@ -71,3 +71,71 @@ uvicorn app.main:app --reload
 **چند نکته:**
 1. در بخش تنظیم فایل `.env`، فرمت `DATABASE_URL` را متناسب با نام متغیری که خودتان در فایل `app/config.py` یا `app/database.py` تعریف کرده‌اید تغییر دهید.
 2. این فایل `README.md` را می‌توانید بعدا که گیت را روی سیستم نصب کردید، همراه با بقیه کدهایتان به گیت‌هاب پوش (Push) کنید تا صفحه اول مخزن شما ظاهر مرتب و حرفه‌ای داشته باشد.
+
+# برنامه ورزشی و غذایی — فرانت‌اند
+
+اسکلت اولیه‌ی پروژه با React + Vite، بر پایه‌ی معماری **feature-based** تا در آینده به‌راحتی قابل توسعه باشد.
+
+## تکنولوژی‌ها
+- **React 18** + **Vite** — سریع و سبک
+- **React Router v6** — روتینگ + lazy loading صفحات
+- **Redux Toolkit** — مدیریت state سراسری (هر feature یک slice مستقل)
+- **Axios** — لایه‌ی ارتباط با API، با interceptor برای توکن و خطاها
+- **React Hook Form** — فرم‌ها
+- **Tailwind CSS** — استایل‌دهی سریع و یکدست
+
+## ساختار پوشه‌ها
+
+```
+src/
+├── app/                  # پیکربندی سراسری (redux store)
+├── assets/               # عکس‌ها و آیکون‌ها
+├── components/
+│   ├── common/           # کامپوننت‌های عمومی UI (Button, Input, Card, Loader)
+│   └── layout/            # Header, Sidebar, MainLayout
+├── config/               # متغیرهای محیطی
+├── features/             # هسته‌ی اصلی معماری — هر ماژول کاملاً مستقل
+│   ├── auth/
+│   │   ├── api/          # فراخوانی‌های API مخصوص این feature
+│   │   ├── components/   # کامپوننت‌های UI مخصوص این feature
+│   │   ├── hooks/        # هوک‌های مخصوص این feature
+│   │   └── authSlice.js  # state management مخصوص این feature
+│   ├── workouts/         # همین الگو
+│   ├── nutrition/        # همین الگو
+│   ├── dashboard/
+│   └── profile/          # اسکلت آماده، فقط باید تکمیل شود
+├── hooks/                # هوک‌های عمومی مشترک بین کل اپ
+├── routes/               # تعریف مسیرها و route های محافظت‌شده
+├── services/             # apiClient مشترک (axios instance)
+├── styles/               # CSS سراسری
+├── App.jsx
+└── main.jsx
+```
+
+## چرا این ساختار؟
+
+هر **feature** (auth، workouts، nutrition، ...) یک پوشه‌ی مستقل با api/components/hooks/slice خودش دارد.
+این یعنی:
+- برای افزودن قابلیت جدید (مثلاً «پیشرفت و آمار»)، کافیست یک پوشه‌ی جدید در `features/` بسازید — چیزی در جاهای دیگر پروژه نباید تغییر کند.
+- کامپوننت‌های `components/common` و `components/layout` فقط UI عمومی هستند و به هیچ feature خاصی وابسته نیستند.
+- تمام درخواست‌های HTTP از یک `apiClient` واحد در `services/` عبور می‌کنند (مدیریت توکن، خطای 401، و غیره در یک‌جا).
+
+## افزودن یک feature جدید (مثال)
+
+1. `src/features/progress/` بسازید با زیرپوشه‌های `api/`, `components/`, `hooks/`
+2. `progressSlice.js` را طبق الگوی `workoutSlice.js` بنویسید
+3. reducer را در `src/app/store.js` اضافه کنید
+4. صفحه را به‌صورت lazy در `src/routes/AppRoutes.jsx` اضافه کنید
+
+## راه‌اندازی
+
+```bash
+npm install
+cp .env.example .env   # آدرس API بک‌اند را تنظیم کنید
+npm run dev
+```
+
+## نکات باقی‌مانده برای شما
+- فیچر `profile` فقط اسکلت پوشه دارد؛ طبق الگوی `workouts` تکمیلش کنید.
+- فونت `Vazirmatn` باید جداگانه import یا از CDN اضافه شود (در `index.html` یا `globals.css`).
+- در حال حاضر state ورودی/خروجی به‌صورت mock نیست — به بک‌اند واقعی روی `VITE_API_BASE_URL` وصل می‌شود.
