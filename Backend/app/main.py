@@ -10,6 +10,8 @@ from app.routers.users import router as users_router
 from app.routers.food_import import router as foods_router
 from app.routers.meal_plan import router as meal_plans_router
 from app.routers.profile import router as profiles_router
+from app.routers.workout_profile import router as workout_profile_router
+from app.routers.workout import router as workout_router
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     async with engine.begin() as conn:
@@ -34,6 +36,8 @@ app.include_router(users_router)
 app.include_router(foods_router)
 app.include_router(meal_plans_router)
 app.include_router(profiles_router)
+app.include_router(workout_profile_router)
+app.include_router(workout_router)
 
 @app.get("/health")
 async def health():

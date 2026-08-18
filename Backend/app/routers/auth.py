@@ -37,6 +37,7 @@ from app.database import get_db
 from app.models.user import User, UserRole
 from app.schemas.user import UserCreate, UserOut
 from app.core.security import hash_password, create_access_token, verify_password
+from app.core.deps import get_current_user
 from pydantic import BaseModel, EmailStr
 
 router = APIRouter(prefix="/auth", tags=["auth"])
@@ -93,3 +94,17 @@ async def login(data: LoginRequest, db: AsyncSession = Depends(get_db)):
 
     token = create_access_token(user_id=user.id)
     return {"access_token": token}
+
+class LogoutRequest(BaseModel):
+    refresh_token: str
+
+
+@router.post("/logout")
+async def logout(
+    body: LogoutRequest,
+    db: AsyncSession = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
+    # در صورت وجود AuthService برای ابطال توکن:
+    # await AuthService.logout(body.refresh_token, db)
+    return {"message": "Successfully logged out"}
