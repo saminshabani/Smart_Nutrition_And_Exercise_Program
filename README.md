@@ -134,8 +134,3 @@ npm install
 cp .env.example .env   # آدرس API بک‌اند را تنظیم کنید
 npm run dev
 ```
-
-## نکات باقی‌مانده برای شما
-- فیچر `profile` فقط اسکلت پوشه دارد؛ طبق الگوی `workouts` تکمیلش کنید.
-- فونت `Vazirmatn` باید جداگانه import یا از CDN اضافه شود (در `index.html` یا `globals.css`).
-- در حال حاضر state ورودی/خروجی به‌صورت mock نیست — به بک‌اند واقعی روی `VITE_API_BASE_URL` وصل می‌شود.
