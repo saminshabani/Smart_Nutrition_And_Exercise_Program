@@ -32,3 +32,4 @@ class User(Base):
         cascade="all, delete-orphan",
         order_by="UserProgress.created_at.desc()",
     )
+    workout_profile = relationship("UserProfile" , back_populates="user", uselist=False)
